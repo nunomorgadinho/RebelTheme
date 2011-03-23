@@ -1,0 +1,82 @@
+/**************************************************
+	LOGO
+**************************************************/
+
+.header .logo h1 a {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	enable='true',
+	sizingMethod='crop',
+	src='wp-content/themes/contrast/images/001/logo.png');
+}
+
+/**************************************************
+	CONTENT
+**************************************************/
+
+.content h1,
+.content h2,
+.content h3 {
+	margin-right: -15px;
+}
+
+/**************************************************
+	NAVIGATION - BLOG
+**************************************************/
+
+.nav.blog .navMask ul.navContent {
+	float: right;
+}
+
+/**************************************************
+	FOOTER
+**************************************************/
+
+.footer {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	enable='true',
+	sizingMethod='scale',
+	src='wp-content/themes/contrast/images/001/footer_BG.png');
+}
+
+/***********************************************************
+	LOADING
+***********************************************************/
+
+.loading {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	enable='true',
+	sizingMethod='crop',
+	src='wp-content/themes/contrast/images/001/loading_BG.png');
+}
+
+/***********************************************************
+	BACKGROUND
+***********************************************************/
+	
+#background div.gradient .right {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	enable='true',
+	sizingMethod='scale',
+	src='wp-content/themes/contrast/images/001/gradient_right_BG.png');
+}
+
+#background div.gradient .left {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	enable='true',
+	sizingMethod='scale',
+	src='wp-content/themes/contrast/images/001/gradient_left_BG.png');
+}
+
+/***********************************************************
+	LIGHTBOX
+***********************************************************/
+
+#lightbox-nav-btnPrev,
+#lightbox-nav-btnNext {
+	zoom: 1;
+}

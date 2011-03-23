@@ -1,0 +1,1 @@
+<img src="<?php echo $_GET['background_image']; ?>" alt="" />

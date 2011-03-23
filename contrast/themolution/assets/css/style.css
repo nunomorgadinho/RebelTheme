@@ -1,0 +1,112 @@
+
+/**************************************************
+	UI TABS
+**************************************************/
+
+.ui-tabs {
+	padding: 0px !important;
+}
+	
+	.ui-tabs .ui-tabs-nav {
+		margin: 10px !important;
+	}
+		
+		.ui-tabs .ui-tabs-nav li a {
+			padding: 10px 20px 10px 40px !important;
+			margin-left: 10px;
+		}
+		
+		.ui-tabs .ui-tabs-nav li.tab-general a { background: url('../images/tab-general.png') left no-repeat; }
+		.ui-tabs .ui-tabs-nav li.tab-header a { background: url('../images/tab-header.png') left no-repeat; }
+		.ui-tabs .ui-tabs-nav li.tab-footer a { background: url('../images/tab-footer.png') left no-repeat; }
+		.ui-tabs .ui-tabs-nav li.tab-homepage a { background: url('../images/tab-homepage.png') left no-repeat; }
+		.ui-tabs .ui-tabs-nav li.tab-portfolio a {background: url('../images/tab-portfolio.png') left no-repeat; }
+		.ui-tabs .ui-tabs-nav li.tab-blog a {background: url('../images/tab-blog.png') left no-repeat; }
+	
+	.ui-tabs .ui-tabs-panel {
+		padding: 0px !important;
+	}
+
+/**************************************************
+	TABLE
+**************************************************/
+
+table.widefat {
+	border: none;
+}
+	
+	table.widefat tbody tr {
+		vertical-align: top;
+	}
+		
+		table.widefat tbody tr th {
+			width: 150px;
+			padding: 10px;
+		}
+		
+		table.widefat tbody tr th.header {
+			border-bottom: none;
+		}
+			
+			table.widefat tbody tr th label {
+				font-size: 12px;
+				line-height: 20px;
+			}
+			
+			table.widefat tbody tr th h3 {
+				padding: 0px 10px 0px 10px;
+				margin: 0px;
+				line-height: 40px;
+			}
+		
+		table.widefat tbody tr.related th {
+			width: 140px;
+			border-left: 10px solid #DFDFDF;
+		}
+		
+		table.widefat tbody tr td {
+			padding: 10px;
+		}
+			
+			table.widefat tbody tr td p {
+				line-height: 20px;
+			}
+			
+			table.widefat tbody tr td textarea,
+			table.widefat tbody tr td select,
+			table.widefat tbody tr td input[type="text"] {
+				width: 250px;
+			}
+		
+	table.widefat tfoot tr th {
+		text-align: right;
+	}
+	
+		table.widefat tfoot tr th p {
+			padding: 0px;
+			margin: 0px;
+		}
+		
+			table.widefat tfoot tr th p input {
+				padding: 3px 8px;
+			}
+
+/**************************************************
+	COLOR PICKER
+**************************************************/
+
+div.picker {
+	margin: -10px 0px 0px 0px;
+	background: #EEEEEE;
+	border: 1px solid #CCCCCC;
+	position: absolute;
+	display: none;
+}
+
+/**************************************************
+	FEATURED ITEMS
+**************************************************/
+
+div.featured a img {
+	margin: 0px 10px 10px 0px;
+}
