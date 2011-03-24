@@ -12,7 +12,14 @@
 					<?php $category = get_the_category(); ?>
 					<li class="item">
 						<h4><?php the_title(); ?></h4>
-						<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+						
+						<?php error_log( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) ); ?>
+						<?php if ( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) == '' ) { ?>												
+					  	<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+						<?php } else { ?>
+						<p class="image"><a class="html5video" href="javascript:;" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+						<?php } ?>
+						
 						<p class="details"><?php echo get_the_date(); ?> | <?php echo $category[0]->cat_name; ?></p>
 						<p class="more"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">VIEW DETAILS</a></p>
 					</li>
@@ -27,7 +34,126 @@
 		
 		<?php if (have_posts()) { ?>
 		<script type="text/javascript">
+		var BrowserDetect = {
+				init: function () {
+					this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+					this.version = this.searchVersion(navigator.userAgent)
+						|| this.searchVersion(navigator.appVersion)
+						|| "an unknown version";
+					this.OS = this.searchString(this.dataOS) || "an unknown OS";
+				},
+				searchString: function (data) {
+					for (var i=0;i<data.length;i++)	{
+						var dataString = data[i].string;
+						var dataProp = data[i].prop;
+						this.versionSearchString = data[i].versionSearch || data[i].identity;
+						if (dataString) {
+							if (dataString.indexOf(data[i].subString) != -1)
+								return data[i].identity;
+						}
+						else if (dataProp)
+							return data[i].identity;
+					}
+				},
+				searchVersion: function (dataString) {
+					var index = dataString.indexOf(this.versionSearchString);
+					if (index == -1) return;
+					return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+				},
+				dataBrowser: [
+					{
+						string: navigator.userAgent,
+						subString: "Chrome",
+						identity: "Chrome"
+					},
+					{ 	string: navigator.userAgent,
+						subString: "OmniWeb",
+						versionSearch: "OmniWeb/",
+						identity: "OmniWeb"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Apple",
+						identity: "Safari",
+						versionSearch: "Version"
+					},
+					{
+						prop: window.opera,
+						identity: "Opera"
+					},
+					{
+						string: navigator.vendor,
+						subString: "iCab",
+						identity: "iCab"
+					},
+					{
+						string: navigator.vendor,
+						subString: "KDE",
+						identity: "Konqueror"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Firefox",
+						identity: "Firefox"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Camino",
+						identity: "Camino"
+					},
+					{		// for newer Netscapes (6+)
+						string: navigator.userAgent,
+						subString: "Netscape",
+						identity: "Netscape"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "MSIE",
+						identity: "Explorer",
+						versionSearch: "MSIE"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Gecko",
+						identity: "Mozilla",
+						versionSearch: "rv"
+					},
+					{ 		// for older Netscapes (4-)
+						string: navigator.userAgent,
+						subString: "Mozilla",
+						identity: "Netscape",
+						versionSearch: "Mozilla"
+					}
+				],
+				dataOS : [
+					{
+						string: navigator.platform,
+						subString: "Win",
+						identity: "Windows"
+					},
+					{
+						string: navigator.platform,
+						subString: "Mac",
+						identity: "Mac"
+					},
+					{
+						   string: navigator.userAgent,
+						   subString: "iPhone",
+						   identity: "iPhone/iPod"
+				    },
+					{
+						string: navigator.platform,
+						subString: "Linux",
+						identity: "Linux"
+					}
+				]
+
+			};
+			BrowserDetect.init();
+			
+		
 			$(document).ready(function() {
+				
 				$('.nav.portfolio .navMask ul.navContent, .navigation, .footer').hover(function() {
 					$('.nav.portfolio .navMask ul.navContent').animate({right: '0px'}, {queue:false, duration: 400});
 					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 400});
@@ -54,6 +180,34 @@
 					});
 				});
 				
+				$('.nav.portfolio .navMask ul.navContent li a.html5video').click(function() {
+					$('.loading').fadeIn();
+					$.ajax({
+						type: 'GET',
+						url: '<?php bloginfo('template_url'); ?>/assets/includes/theme-loader.php',
+						data: 'background_image=' + $(this).attr('rev') + '&ogg=' + $(this).attr('rel') + '&type=html5video',
+						success: function(html) {
+							$('#background').html(html);
+
+							var myVideo = $('#background video');
+	
+							//console.log(myVideo);
+							if (typeof myVideo.loop == 'boolean') { // loop supported
+							  myVideo.loop = true;
+							} else { // loop property not supported
+							  myVideo.bind('ended', function () {
+							    this.currentTime = 0;
+							    this.play();
+							  }, false);
+							}
+							
+							//myVideo.play();
+																
+							$('.loading').fadeOut();
+						}
+					});
+				});
+
 				$('.nav.portfolio .navMask ul.navContent li p.image a:eq(0)').click();
 			});
 		</script>

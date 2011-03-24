@@ -72,6 +72,10 @@ $theme_metaboxes = array(
 						'value' => '4',
 						'label' => 'Google Maps'
 					),
+					array(
+						'value' => '5',
+						'label' => 'HTML5 Video'
+					)
 				),
 				'std' => '0'
 			),
@@ -125,6 +129,16 @@ $theme_metaboxes = array(
 				'related' => array(
 					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
 					'options' => '3'
+				)
+			),
+			array(
+				'type' => 'input-upload',
+				'id' => '_' . THEMEPREFIX . '_' . 'post_background_html5_video',
+				'name' => 'HTML5 Video',
+				'desc' => '<p>Enter the file path of the post <b>background HTML5 video</b> (mp4).</p>',
+				'related' => array(
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+					'options' => '5'
 				)
 			),
 			array(
@@ -196,6 +210,10 @@ $theme_metaboxes = array(
 						'value' => '4',
 						'label' => 'Google Maps'
 					),
+					array(
+						'value' => '5',
+						'label' => 'HTML5 Video'
+					)
 				),
 				'std' => '0'
 			),
@@ -249,6 +267,26 @@ $theme_metaboxes = array(
 				'related' => array(
 					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
 					'options' => '3'
+				)
+			),
+			array(
+				'type' => 'input-upload',
+				'id' => '_' . THEMEPREFIX . '_' . 'post_background_html5_video_mp4',
+				'name' => 'HTML5 Video',
+				'desc' => '<p>Enter the file path of the post <b>background HTML5 video</b> (mp4).</p>',
+				'related' => array(
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+					'options' => '5'
+				)
+			),
+			array(
+				'type' => 'input-upload',
+				'id' => '_' . THEMEPREFIX . '_' . 'post_background_html5_video_ogg',
+				'name' => 'HTML5 Video',
+				'desc' => '<p>Enter the file path of the post <b>background HTML5 video</b> (ogg).</p>',
+				'related' => array(
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+					'options' => '5'
 				)
 			),
 			array(

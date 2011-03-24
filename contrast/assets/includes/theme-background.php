@@ -7,6 +7,9 @@
 <!-- background start -->
 <div id="background">
 	<?php if (is_home()) { ?>
+	
+			<?php error_log( 'estou aqui 2 ' + meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')) ); ?>
+			
 		<?php if (option('home_background') == '1') { ?>
 			
 			<style type="text/css">
@@ -29,6 +32,17 @@
 				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
 			</script>
 			
+		<?php } elseif (option('home_background') == '5') { ?>
+			
+			<script type="text/javascript">
+			/*	var flashvars = { flv : '<?php echo option('home_background_flash_video'); ?>' };
+				var params = { wmode: 'transparent' };
+				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
+			*/
+			</script>
+			<video id="video_element" height="100%" width="100%" autoplay="autoplay" loop="loop" src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')); ?>">
+    </video>
+			
 		<?php } elseif (option('home_background') == '4') { ?>
 			
 			<?php if (option('home_background_google_maps_gradient') == '1') { ?>
@@ -43,6 +57,8 @@
 		<?php } ?>
 		
 	<?php } else { ?>
+		
+		<?php error_log( 'estou aqui ' + meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')) ); ?>
 		
 		<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '1') { ?>
 			
@@ -65,7 +81,18 @@
 				var params = { wmode: 'transparent' };
 				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
 			</script>
+		
+		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '5') { ?>
 			
+			<script type="text/javascript">
+				/*var flashvars = { flv : '<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')); ?>' };
+				var params = { wmode: 'transparent' };
+				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
+			*/
+			</script>
+			<video id="video_element" height="100%" width="100%" autoplay="autoplay" loop="loop" src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')); ?>">
+    </video>
+		
 		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '4') { ?>
 			
 			<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background_google_maps_gradient')) == '1') { ?>
