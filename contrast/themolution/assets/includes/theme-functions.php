@@ -339,7 +339,7 @@ function image($args) {
 				$src = '/blogs.dir/' . $blog_id . '/files/' . $parts[1];
 			}
 		}
-		
+
 		$src = $file . '?dir=' . THEMECACHE . '&amp;src=' . $src . '&amp;w=' . $args['width'] . '&amp;h=' . $args['height'] . '&amp;zc=1';
 	}
 	

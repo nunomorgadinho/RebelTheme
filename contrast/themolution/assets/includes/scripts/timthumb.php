@@ -19,6 +19,8 @@ define ('MAX_WIDTH', 1000);							// maximum image width
 define ('MAX_HEIGHT', 1000);						// maximum image height
 define ('ALLOW_EXTERNAL', FALSE);					// allow external website (override security precaution)
 
+
+
 // external domains that are allowed to be displayed on your website
 $allowedSites = array (
 	'flickr.com',
@@ -30,12 +32,13 @@ $allowedSites = array (
 
 // STOP MODIFYING HERE!
 // --------------------
-
+$src = $_GET['src'];
 // sort out image source
 $src = get_request ('src', '');
 if ($src == '' || strlen ($src) <= 3) {
     display_error ('no image specified');
 }
+
 
 // clean params before use
 $src = clean_source ($src);
@@ -52,6 +55,7 @@ check_cache ($mime_type);
 if (!function_exists ('imagecreatetruecolor')) {
     display_error ('GD Library Error: imagecreatetruecolor does not exist - please contact your webhost and ask them to install the GD library');
 }
+
 
 if (function_exists ('imagefilter') && defined ('IMG_FILTER_NEGATE')) {
 	$imageFilters = array (
@@ -90,6 +94,7 @@ $new_height = min ($new_height, MAX_HEIGHT);
 
 // set memory limit to be able to have enough space to resize larger images
 ini_set ('memory_limit', '50M');
+
 
 if (file_exists ($src)) {
 
@@ -476,12 +481,13 @@ function check_cache ($mime_type) {
  */
 function show_cache_file ($mime_type) {
 
+	date_default_timezone_set('Europe/Lisbon');
 	// use browser cache if available to speed up page load
 	if (isset ($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
 		if (strtotime ($_SERVER['HTTP_IF_MODIFIED_SINCE']) < strtotime('now')) {
 			header ('HTTP/1.1 304 Not Modified');
 			die ();
-		}
+		} 
 	}
 
 	$cache_file = get_cache_file ($mime_type);
@@ -499,8 +505,11 @@ function show_cache_file ($mime_type) {
 		header ('Content-Length: ' . filesize ($cache_file));
 		header ('Cache-Control: max-age=864000, must-revalidate');
 		header ('Expires: ' . $gmdate_expires);
-
-		if (!@readfile ($cache_file)) {
+	
+		//echo $cache_file;
+		//die();
+		
+		if (!readfile ($cache_file)) {
 			$content = file_get_contents ($cache_file);
 			if ($content != FALSE) {
 				echo $content;
