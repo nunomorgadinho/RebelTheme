@@ -90,7 +90,8 @@
 			<?php wp_nav_menu(array(
 				'container' => '',
 				'menu_class' => 'menu',
-				'theme_location' => 'menu-header'
+				'theme_location' => 'menu-header',
+				'menu' => '4'
 			)); ?>
 			<!-- menu end -->
 			
