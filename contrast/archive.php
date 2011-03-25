@@ -13,11 +13,12 @@
 					<li class="item">
 						<h4><?php the_title(); ?></h4>
 						
-						<?php error_log( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) ); ?>
-						<?php if ( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) == '' ) { ?>												
-					  	<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+						<?php if ( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) == '' ) { ?>		
+							<?php //error_log( image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)) ); ?>																
+					  		<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } else { ?>
-						<p class="image"><a class="html5video" href="javascript:;" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+							<?php //error_log( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) ); ?>
+							<p class="image"><a class="html5video" id="videolink" name="videolink" href="javascript:;" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } ?>
 						
 						<p class="details"><?php echo get_the_date(); ?> | <?php echo $category[0]->cat_name; ?></p>
@@ -155,21 +156,23 @@
 			$(document).ready(function() {
 				
 				$('.nav.portfolio .navMask ul.navContent, .navigation, .footer').hover(function() {
-					$('.nav.portfolio .navMask ul.navContent').animate({right: '0px'}, {queue:false, duration: 400});
-					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 400});
+					$('.nav.portfolio .navMask ul.navContent').animate({right: '0px'}, {queue:false, duration: 300});
+					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 300});
 				},
 				function(){
-					$('.nav.portfolio .navMask ul.navContent').animate({right: '-200px'}, {queue:false, duration: 200});
-					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 200});
+					$('.nav.portfolio .navMask ul.navContent').animate({right: '-200px'}, {queue:false, duration: 100});
+					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
 				});
 				
-				$('.nav.portfolio .navMask ul.navContent li p.image a').click(function() {
+				$('.nav.portfolio .navMask ul.navContent li p.image a[name!="videolink"]').click(function() {
+					//alert('IMAGE');
 					$('.loading').fadeIn();
 					$.ajax({
 						type: 'GET',
 						url: '<?php bloginfo('template_url'); ?>/assets/includes/theme-loader.php',
 						data: 'background_image=' + $(this).attr('rel'),
 						success: function(html) {
+							//console.log('image - ' + html);
 							$('#background').html(html);
 							$('#background img').load(function() {
 								background_resize();
@@ -180,25 +183,27 @@
 					});
 				});
 				
-				$('.nav.portfolio .navMask ul.navContent li a.html5video').click(function() {
+				$('.nav.portfolio .navMask ul.navContent li p.image a[name="videolink"]').click(function() {
+					//alert('VIDEO');
 					$('.loading').fadeIn();
 					$.ajax({
 						type: 'GET',
 						url: '<?php bloginfo('template_url'); ?>/assets/includes/theme-loader.php',
 						data: 'background_image=' + $(this).attr('rev') + '&ogg=' + $(this).attr('rel') + '&type=html5video',
 						success: function(html) {
+							//console.log('video - ' + html);
 							$('#background').html(html);
 
 							var myVideo = $('#background video');
 	
 							//console.log(myVideo);
 							if (typeof myVideo.loop == 'boolean') { // loop supported
-							  myVideo.loop = true;
+							//  myVideo.loop = true;
 							} else { // loop property not supported
-							  myVideo.bind('ended', function () {
-							    this.currentTime = 0;
-							    this.play();
-							  }, false);
+							//  myVideo.bind('ended', function () {
+							 //   this.currentTime = 0;
+							 //   this.play();
+							//  }, false);
 							}
 							
 							//myVideo.play();
@@ -208,7 +213,9 @@
 					});
 				});
 
-				$('.nav.portfolio .navMask ul.navContent li p.image a:eq(0)').click();
+				$('#videolink').click();
+				
+				//$('.nav.portfolio .navMask ul.navContent li p.image a[name!="image"]:eq(0)').click(); // input[name!="newsletter"]
 			});
 		</script>
 		<?php } ?>

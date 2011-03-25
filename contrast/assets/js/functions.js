@@ -268,12 +268,13 @@ function blog() {
 
 function portfolio() {
 	
-	$('.nav.portfolio .navMask ul.navContent li').not('.paging').hover(function(){
-		$(this).animate({right: '0px'}, {queue:false, duration: 100});
-	},
-	function(){
-		$(this).animate({right: '-10px'}, {queue:false, duration: 100});
-	});
+//	$('.nav.portfolio .navMask ul.navContent li').not('.paging').hover(function(){
+//		$(this).animate({right: '0px'}, {queue:false, duration: 100});
+//	},
+//	function(){
+//		$(this).animate({right: '-10px'}, {queue:false, duration: 100});
+//	});
+	
 	
 	$('.nav.portfolio .navMask ul.navContent li p.image img').hover(function(){
 		$(this).animate({opacity: '0.5'}, {queue:false, duration: 100});
