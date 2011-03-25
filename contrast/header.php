@@ -77,7 +77,7 @@
 
 <body <?php body_class($body_class); ?>>
 
-<div class="container">
+<div class="container"> 
 	<!-- header start -->
 	<div class="header">
 		<!-- logo start -->
