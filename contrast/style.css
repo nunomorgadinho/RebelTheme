@@ -216,20 +216,28 @@ a {
 		clear: both;
 	}
 
+
+	.content { font-family:Arial}
 	.content h1,
 	.content h2,
 	.content h3 {
-		font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-		font-weight: bold;
+		font-family: 'Lucida sans',Arial,'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+		
 		letter-spacing: -2px;
 		text-transform: uppercase;
 		text-align: right;
-		color: #000000;
-		padding: 0px 30px 0px 60px;
+		color: #FB0505;
+		padding: 0px 30px 0px 0px;
 		margin: 20px -30px 30px 0px;
-		background: #FFFFFF;
-		float: right;
+	
+		float: left;
 	}
+	
+	.content a {
+			background: #FFFFFF; 
+			color: #000000;
+			text-decoration:none;
+			}
 
 	.content h1 {
 		font-size: 36px;
@@ -308,11 +316,13 @@ a {
 
 .sliderContent{
 	padding: 0px 30px 30px 0px;
+	margin-left:50px;
 }
 
 .jScrollPaneContainer {
 	position: relative;
 	overflow: hidden;
+	background: url('assets/images/content_BG.png') repeat-y;
 }
 
 .jScrollPaneTrack,
@@ -554,8 +564,9 @@ form#commentform {
 	
 		.nav.portfolio .navMask ul.navContent li:hover {
 			color: #000000;
-			background: #FFFFFF;
+			background: #FF0000;
 		}
+		
 		
 		.nav.portfolio .navMask ul.navContent li:hover p.more a {
 			color: #000000;
@@ -593,17 +604,26 @@ form#commentform {
 		top: 0px;
 		left: 0px;
 	}
+	
 		
 		.nav.portfolio .navMask ul.navContent li p.image a {
 			padding: 0px;
 			background: none;
 		}
 		
+		
 	.nav.portfolio .navMask ul.navContent li p.details {
 		color: #808080;
 		margin-bottom: 7px;
 	}
 	
+	.nav.portfolio .navMask ul.navContent li:hover p.details {
+		color: #FFFFFF;
+		margin-bottom: 7px;
+	}
+	
+		
+		
 		.nav.portfolio .navMask ul.navContent li p.details a {
 			padding: 0px;
 			color: #808080;
@@ -693,8 +713,8 @@ form#commentform {
 ***********************************************************/
 
 .loading {
-	width: 248px;
-	height: 36px;
+	width: 260px;
+	height: 65px;
 	padding-top: 17px;
 	margin: -48px 0px 0px -124px;
 	text-align: center;
