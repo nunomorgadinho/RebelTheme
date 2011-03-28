@@ -330,7 +330,7 @@ $theme_metaboxes = array(
 
 $theme_options = array(
 	
-	/*array(
+/*	array(
 		'type' => 'array_type',
 		'id' => THEMEPREFIX . 'array_id',
 		'name' => 'Array Name',
@@ -387,6 +387,11 @@ $theme_options = array(
 		'name' => 'Portfolio',
 	),
 	array(
+		'type' => 'tab',
+		'id' => 'blog',
+		'name' => 'Blog',
+	),
+	array(
 		'type' => 'tabs-end'
 	),
 	
@@ -401,6 +406,7 @@ $theme_options = array(
 		'id' => 'interface-options',
 		'name' => 'Interface Options',
 	),
+	
 	array(
 		'type' => 'text',
 		'id' => THEMEPREFIX . '_' . 'theme_background',
@@ -993,7 +999,28 @@ $theme_options = array(
 	),
 	array(
 		'type' => 'content-end'
+	),
+	
+	//CONTENT - BLOG
+	
+	array(
+		'type' => 'content-start',
+		'id' => 'blog'
+	),
+	array(
+		'type' => 'select',
+		'id' => 'blog_category',
+		'name' => 'Blog Category',
+		'desc' => '<p>Select the <b>blog</b> category.</p>',
+		'options' => list_categories(array('hide_empty' => '0')),
+		'std' => '0',
+	),
+	array(
+		'type' => 'content-end'
 	)
+	
+	
+	
 );
 
 /**************************************************

@@ -219,6 +219,7 @@ a {
 	top: 0px;
 	right: 0px;
 	line-height: 18px;
+	
 }
 
 	.content * {
@@ -226,19 +227,20 @@ a {
 	}
 
 
+	.content p strong {color:#FB0505;}
+
 	.content { font-family:Arial}
 	.content h1,
 	.content h2,
 	.content h3 {
 		font-family: 'Lucida sans',Arial,'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-		
+		font-weight:bold;
 		letter-spacing: -2px;
 		text-transform: uppercase;
 		text-align: right;
 		color: #FB0505;
 		padding: 0px 30px 0px 0px;
 		margin: 20px -30px 30px 0px;
-	
 		float: left;
 	}
 	
@@ -267,8 +269,10 @@ a {
 	.content h3.details {
 		color: #FFFFFF;
 		margin-top: -30px;
-		background: #000000;
+		
 		white-space: nowrap;
+		font-size:13px;
+		float:left;
 	}
 	
 		.content h3.details span.cats {
@@ -349,7 +353,7 @@ a {
 }
 
 .jScrollPaneDrag {
-	background: #FFFFFF;
+	background: #FB0505;
 	cursor: pointer;
 	position: absolute;
 	z-index: 1;
@@ -418,7 +422,6 @@ ol.commentlist {
 		}
 	
 form#commentform {
-	padding-left: 74px;
 	margin: 30px 0px 20px 0px;
 	font: 12px 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	color: #000000;
@@ -428,8 +431,6 @@ form#commentform {
 		height: 30px;
 		margin-bottom: 5px;
 		background: #FFFFFF;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
 	}
 	
 		form#commentform p label {
@@ -515,21 +516,25 @@ form#commentform {
 			font: 10px 'Tahoma';
 			line-height: 35px;
 			text-decoration: none;
-			color: #000000;
+			color: #FFFFFF;
 			padding: 0px 10px 0px 20px;
-			background: #FFFFFF;
+			background: #000000;
 			display: inline-block;
 		}
 		
 		.nav.blog .navMask ul.navContent li a:hover {
 			color: #FFFFFF;
-			background: #000000;
+			background: #FB0505;
 		}
 		
-			.nav.blog .navMask ul.navContent li a span.date {
-				color: #808080;
-				margin-left: 10px;
-			}
+		.nav.blog .navMask ul.navContent li a span.date {
+			color: #808080;
+			margin-left: 10px;
+		}
+		
+			.nav.blog .navMask ul.navContent li a span.date:hover {
+			color: #000000;
+		}
 		
 		.nav.blog .navMask ul.navContent li.paging a {
 			color: #FFFFFF;
@@ -648,6 +653,12 @@ form#commentform {
 	.nav.portfolio .navMask ul.navContent h2 {
 		margin: 0px 0px 10px 0px;
 	}
+
+	.content_bg{	
+		background: url('assets/images/content_BG.png') repeat-y;
+		height:100%;
+		width:530px;	
+		}
 
 /**************************************************
 	FOOTER
