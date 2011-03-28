@@ -83,6 +83,9 @@
 		<!-- logo start -->
 		<?php $tag_logo = (is_home() || is_front_page()) ? 'h1' : 'div'; ?>
 		<<?php echo $tag_logo; ?> class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></<?php echo $tag_logo; ?>>
+		<div class="videologo" style="opacity:0" >
+		<img src="<?php bloginfo('template_url'); ?>/assets/images/oculos_rebel.png" style="margin-left: 50px; margin-top: 50px;" alt="glasses"></img>
+		</div>
 		<!-- logo end -->
 		
 		<div class="navigation">

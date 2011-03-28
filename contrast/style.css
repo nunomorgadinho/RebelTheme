@@ -88,12 +88,12 @@ a {
 
 .logo {
 	position: absolute;
-	top: 30px;
-	left: 30px;
+	/*top: 30px;
+	left: 30px;*/
 }
 
 	.logo a {
-		width: 330px;
+		width: 1200px;
 		height: 80px;
 		text-indent: -9999px;
 		background: url('assets/images/logo.png') no-repeat;
@@ -104,6 +104,8 @@ a {
 	MENU
 **************************************************/
 
+
+
 .navigation {
 	text-transform: uppercase;
 	position: absolute;
@@ -112,25 +114,27 @@ a {
 }
 	
 	.navigation ul.menu li a {
-		font: bold 14px 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+		font: 12px 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
 		color: #000000;
 		line-height: 35px;
 		text-decoration: none;
-		padding: 0px 10px 0px 10px;
+		padding: 0px 10px 8px 10px;
 		margin-bottom: 5px;
 		background: #FFFFFF;
 		float: left;
 		clear: both;
+		width: 140px;
+		height: 22px;
 	}
 	
 	.navigation ul.menu li ul {
-		float: left;
+		float: bottom;
 		display: none;
 	}
 		
 		.navigation ul.menu li ul li {
 			margin: 0px 0px 0px 1px;
-			float: left;
+			float: bottom;
 		}
 			
 			.navigation ul.menu li ul li a {
@@ -164,7 +168,12 @@ a {
 					.navigation ul.menu li ul li ul li ul {
 						display: none !important;
 					}
-					
+
+.navigation ul.sub-menu
+{
+	text-indent:50px;
+}
+
 /**************************************************
 	SEARCH
 **************************************************/
@@ -786,7 +795,7 @@ form#commentform {
 
 .theme_color_2 {
 	color: #FFFFFF !important;
-	background: #000000 !important;
+	background: #fb0505 !important;
 }
 
 .ngg-gallery-thumbnail a { padding: 0px !important; }

@@ -7,8 +7,6 @@
 <!-- background start -->
 <div id="background">
 	<?php if (is_home()) { ?>
-	
-			<?php error_log( 'estou aqui 2 ' ); ?>
 			
 		<?php if (option('home_background') == '1') { ?>
 			
@@ -57,8 +55,6 @@
 		<?php } ?>
 		
 	<?php } else { ?>
-		
-		<?php error_log( 'estou aqui ' ); ?>
 		
 		<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '1') { ?>
 			

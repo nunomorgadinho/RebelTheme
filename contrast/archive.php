@@ -154,14 +154,39 @@
 			
 		
 			$(document).ready(function() {
-				
-				$('.nav.portfolio .navMask ul.navContent, .navigation, .footer').hover(function() {
+
+				/*
+					Hover do menu -->
+				*/
+				$('.navigation').hover(function() {
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '1', right: '-200px'}, {queue:false, duration: 300});
+					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 100});
+					$('.logo').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.videologo').animate({opacity: '0'}, {queue:false, duration: 300});
+				},
+				function(){
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0.1', right: '-200px'}, {queue:false, duration: 100});
+					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.logo').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
+				});
+
+				/*
+					Hover do menu <--
+				*/
+				$('.nav.portfolio .navMask ul.navContent').hover(function() {
 					$('.nav.portfolio .navMask ul.navContent').animate({right: '0px'}, {queue:false, duration: 300});
-					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.navigation .footer').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.logo').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.videologo').animate({opacity: '0'}, {queue:false, duration: 300});
 				},
 				function(){
 					$('.nav.portfolio .navMask ul.navContent').animate({right: '-200px'}, {queue:false, duration: 100});
-					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.navigation .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0'}, {queue:false, duration: 300});
+					$('.logo').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
 				});
 				
 				$('.nav.portfolio .navMask ul.navContent li p.image a[name!="videolink"]').click(function() {

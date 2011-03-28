@@ -176,7 +176,7 @@ function menu() {
 			paddingLeft: '10px'}, {queue:false, duration: 100
 		}).removeClass('theme_color_2').addClass('theme_color_1');
 		
-		$(this).find('ul').hide();
+	//	$(this).find('ul').hide();
 	});
 }
 
