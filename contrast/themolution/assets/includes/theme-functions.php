@@ -32,6 +32,8 @@ function envato($args) {
 
 function list_categories($args = false) {
 	
+	$result = array();
+	
 	$listed = get_categories($args);
 	$select = array(
 		'value' => '0',

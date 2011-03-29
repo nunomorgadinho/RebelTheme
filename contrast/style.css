@@ -213,15 +213,49 @@ a {
 	CONTENT
 **************************************************/
 
-.content {
+	#rss-3 ul li {padding-top:10px;}
+	#rss-3 ul li cite {color:#FB0505;}
+	
+	.wp_youtube_gallery{margin-top:25px;}
+	
+
+	.widgettitle {visibility:hidden;}
+
+	.content_wide {
+	width: 80%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	line-height: 18px;
+	text-align: justify;
+	margin-top: 80px;
+	background: url('assets/images/social_BG.png') repeat-y;
+	text-align:center;
+	}
+	
+	.left{
+		float: left; width:25%; margin-left:5%;padding-top:7%;
+	}
+	
+	.middle{
+		float: left;width:25%;  margin-left:8%;padding-top:7%; text-align:justify;
+	}
+	
+	.right{
+		float: right;width:25%; margin-right:5%;padding-top:7%;
+	}
+
+
+	.content {
 	width: 530px;
 	height: 100%;
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	line-height: 18px;
-	
-}
+		
+	}
 
 	.content * {
 		clear: both;
@@ -698,23 +732,23 @@ form#commentform {
 		}
 		
 		.footer ul.social li a.social-rss {
-			background: url('assets/images/icon-rss.gif') no-repeat;
+			background: url('assets/images/icon-rss.png') no-repeat;
 		}
 		
 		.footer ul.social li a.social-facebook {
-			background: url('assets/images/icon-facebook.gif') no-repeat;
+			background: url('assets/images/icon-facebook.png') no-repeat;
 		}
 		
 		.footer ul.social li a.social-twitter {
-			background: url('assets/images/icon-twitter.gif') no-repeat;
+			background: url('assets/images/icon-twitter.png') no-repeat;
 		}
 		
 		.footer ul.social li a.social-friendfeed {
-			background: url('assets/images/icon-friendfeed.gif') no-repeat;
+			background: url('assets/images/icon-friendfeed.png') no-repeat;
 		}
 		
 		.footer ul.social li a.social-flickr {
-			background: url('assets/images/icon-flickr.gif') no-repeat;
+			background: url('assets/images/icon-flickr.png') no-repeat;
 		}
 
 .footer .copyright {

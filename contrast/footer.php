@@ -13,7 +13,7 @@
 		
 		<div class="copyright">
 			<?php if (option('copyright') == '0') { ?>
-			<p>Copyright &copy; <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. Powered by <a href="http://www.wordpress.org">Wordpress</a></p>
+			<p>Copyright &copy; <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. Powered by <a href="http://www.widgilabs.com">WidgiLabs</a></p>
 			<? } else { ?>
 			<p><?php echo option('copyright_text'); ?></p>
 			<?php } ?>
