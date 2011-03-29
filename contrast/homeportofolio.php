@@ -171,6 +171,22 @@ $loop = new WP_Query( $args );
 				$('.navigation, .footer').animate({opacity: '0'}, {queue:false, duration: 100});
 				$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
 				$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
+
+				/*
+					Hover do videologo
+				*/
+				$('.logo').hover(function() {
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '1', right: '-200px'}, {queue:false, duration: 300});
+					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 100});
+					$('.logo').animate({opacity: '1'}, {queue:false, duration: 300});
+					$('.videologo').animate({opacity: '0'}, {queue:false, duration: 300});
+				},
+				function(){
+					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0', right: '-200px'}, {queue:false, duration: 100});
+					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
+					$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
+					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 300});
+				});
 				
 				/*
 					Hover do menu -->
