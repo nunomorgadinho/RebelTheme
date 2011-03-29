@@ -220,7 +220,7 @@ a {
 
 	#rss-3 ul li {padding-top:10px;}
 	#rss-3 ul li cite {color:#FB0505;}
-	
+	#rss-3 ul {text-align:justify;}
 	.wp_youtube_gallery{margin-top:25px;}
 	
 
@@ -755,6 +755,29 @@ form#commentform {
 		.footer ul.social li a.social-flickr {
 			background: url('assets/images/icon-flickr.png') no-repeat;
 		}
+		
+		.footer ul.social2 li a {
+			width: 16px;
+			height: 16px;
+			display: block;
+		}
+		
+		.footer ul.social2 li {
+			margin: 0px 5px 0px 0px;
+			float: right;
+			opacity: 0.5;
+			filter: alpha(opacity = 50);
+		}
+	
+		.footer ul.social2 li a.social-clientarea {
+			background: url('assets/images/cadeado.png') no-repeat;	
+			right: 10px;
+			position: absolute;
+			bottom: 7px;
+			text-indent: -100px;
+			text-decoration: none;
+			color: #fb0505;
+		}
 
 .footer .copyright {
 	font: 10px 'Tahoma';
@@ -767,6 +790,8 @@ form#commentform {
 	.footer .copyright a {
 		color: #FFFFFF;
 	}
+
+
 
 /***********************************************************
 	LOADING

@@ -164,6 +164,8 @@ $loop = new WP_Query( $args );
 			
 		
 			$(document).ready(function() {
+				return;
+				
 				/*
 				Inicio
 				*/

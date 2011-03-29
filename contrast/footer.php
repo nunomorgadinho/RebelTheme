@@ -18,7 +18,12 @@
 			<p><?php echo option('copyright_text'); ?></p>
 			<?php } ?>
 		</div>
+		
+		<ul class="social2">
+			<li><a href="/wp-login.php" class="social-clientarea">Área de Clientes</a></li>
+		</ul>
 	</div>
+	
 	<!-- footer end -->
 </div>
 
