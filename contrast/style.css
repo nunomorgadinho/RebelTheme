@@ -96,7 +96,8 @@ a {
 		width: 1200px;
 		height: 80px;
 		text-indent: -9999px;
-		background: url('assets/images/logo.png') no-repeat;
+		background: url('assets/images/header_BG6.png') no-repeat;
+		/*opacity: 0.3;*/
 		display: block;
 	}
 	
