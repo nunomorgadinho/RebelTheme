@@ -227,28 +227,28 @@ a {
 	.widgettitle {visibility:hidden;}
 
 	.content_wide {
-	width: 80%;
+	width: 60%;
 	height: 100%;
 	position: absolute;
 	top: 0px;
 	right: 0px;
 	line-height: 18px;
-	text-align: justify;
+
 	margin-top: 80px;
 	background: url('assets/images/social_BG.png') repeat-y;
 	text-align:center;
 	}
 	
 	.left{
-		float: left; width:25%; margin-left:5%;padding-top:7%;
+		float: left; width:20%; margin-left:5%;padding-top:7%; 
 	}
 	
 	.middle{
-		float: left;width:25%;  margin-left:8%;padding-top:7%; 
+		float: left;width:25%;  ;padding-top:7%; margin-left:10%;
 	}
 	
 	.right{
-		float: right;width:25%; margin-right:5%;padding-top:7%;
+		float: left;width:20%; padding-top:7%; margin-left:10%;
 	}
 
 
