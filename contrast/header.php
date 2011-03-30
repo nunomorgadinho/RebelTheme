@@ -73,6 +73,7 @@
 	
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
+	
 </head>
 
 <body <?php body_class($body_class); ?>>
@@ -89,7 +90,7 @@
 		</div>
 		<!-- logo end -->
 		
-		<div class="navigation" style="opacity:0.1">
+		<div class="navigation" <?php if (is_page('9')) { echo 'style="opacity:0.1"';} ?>>
 			<!-- menu start -->
 			<?php wp_nav_menu(array(
 				'container' => '',
