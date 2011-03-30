@@ -150,8 +150,8 @@ a {
 			}
 				
 				.navigation ul.menu li ul li a:hover {
-					color: #000000;
-					background: #FFFFFF;
+					color: #FB0505;
+					background: #000000;
 				}
 			
 			.navigation ul.menu li ul li ul {
@@ -226,7 +226,7 @@ a {
 
 	.widgettitle {visibility:hidden;}
 
-	.content_wide {
+		_wide {
 	width: 80%;
 	height: 100%;
 	position: absolute;
@@ -269,7 +269,7 @@ a {
 
 	.content p strong {color:#FB0505;}
 
-	.content { font-family:Arial}
+	.content { font-family:Arial; font-size:14px;}
 	.content h1,
 	.content h2,
 	.content h3 {
@@ -782,14 +782,14 @@ form#commentform {
 
 .footer .copyright {
 	font: 10px 'Tahoma';
-	color: #FFFFFF;
+	color: #C0C0C0;
 	line-height: 30px;
 	text-align: center;
 	text-transform: uppercase;
 }
 
 	.footer .copyright a {
-		color: #FFFFFF;
+		color: #C0C0C0;
 	}
 
 
