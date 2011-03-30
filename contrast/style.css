@@ -594,6 +594,7 @@ form#commentform {
 	position: relative;
 	float: right;
 	overflow: hidden;
+	z-index: 100;
 }
 
 .nav.portfolio .navMask ul.navContent {

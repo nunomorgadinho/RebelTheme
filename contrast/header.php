@@ -89,7 +89,7 @@
 		</div>
 		<!-- logo end -->
 		
-		<div class="navigation">
+		<div class="navigation" style="opacity:0.1">
 			<!-- menu start -->
 			<?php wp_nav_menu(array(
 				'container' => '',
