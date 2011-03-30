@@ -240,15 +240,15 @@ a {
 	}
 	
 	.left{
-		float: left; width:20%; margin-left:5%;padding-top:7%; 
+		float: left; width:17%; margin-left:5%;padding-top:7%; 
 	}
 	
 	.middle{
-		float: left;width:25%;  ;padding-top:7%; margin-left:13%;
+		float: left;width:20%;  ;padding-top:7%; margin-left:13%;
 	}
 	
 	.right{
-		float: left;width:20%; padding-top:7%; margin-left:7%;
+		float: left;width:17%; padding-top:7%; margin-left:7%;
 	}
 
 
