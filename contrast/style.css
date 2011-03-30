@@ -226,7 +226,7 @@ a {
 
 	.widgettitle {visibility:hidden;}
 
-		_wide {
+	.content_wide {
 	width: 80%;
 	height: 100%;
 	position: absolute;
