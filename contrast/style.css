@@ -226,7 +226,7 @@ a {
 
 	.widgettitle {visibility:hidden;}
 
-	.content_wide {
+		_wide {
 	width: 80%;
 	height: 100%;
 	position: absolute;
@@ -269,7 +269,7 @@ a {
 
 	.content p strong {color:#FB0505;}
 
-	.content { font-family:Arial}
+	.content { font-family:Arial; font-size:14px;}
 	.content h1,
 	.content h2,
 	.content h3 {
