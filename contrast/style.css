@@ -126,7 +126,7 @@ a {
 		text-decoration: none;
 		padding: 0px 10px 8px 10px;
 		margin-bottom: 5px;
-		background: #000000;
+		background: #FFFFFF;
 		float: left;
 		clear: both;
 		width: 140px;
@@ -150,8 +150,8 @@ a {
 			}
 				
 				.navigation ul.menu li ul li a:hover {
-					color: #000000;
-					background: #FFFFFF;
+					color: #FB0505;
+					background: #000000;
 				}
 			
 			.navigation ul.menu li ul li ul {
