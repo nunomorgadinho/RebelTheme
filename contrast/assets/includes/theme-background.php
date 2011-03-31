@@ -80,7 +80,12 @@
 		
 		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '5') { ?>
 			
-			<!-- not implemented yet -->
+			<script type="text/javascript">
+				var flashvars = { flv : '<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_flash_video')); ?>' };
+				var params = { wmode: 'transparent' };
+				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
+			</script>
+			
 		
 		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '4') { ?>
 			
