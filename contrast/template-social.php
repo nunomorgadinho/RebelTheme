@@ -11,14 +11,14 @@ Template Name: Social
 			
 			<div class="left" style="">
 			
-				<img src="<?php bloginfo('template_url');?>/assets/images/youtube.png" style="padding-top:5%;" />
+				<img src="<?php bloginfo('template_url');?>/assets/images/youtube.png" />
 			
 				<?php echo widgets_on_template(1);?>
 			</div>
 					
-			<div class="middle" style="text-align:justify;">	
+			<div class="middle" >	
 			
-				<img src="<?php bloginfo('template_url');?>/assets/images/facebook.png" style="padding-top:5%; padding-left:45px;"/>
+				<img src="<?php bloginfo('template_url');?>/assets/images/facebook.png" />
 	
 		
 				<?php echo widgets_on_template(2);?>
@@ -28,7 +28,7 @@ Template Name: Social
 	
 			<div class="right" >	
 	
-				<img src="<?php bloginfo('template_url');?>/assets/images/vimeo.png" style="padding-top:5%;" />
+				<img src="<?php bloginfo('template_url');?>/assets/images/vimeo.png" />
 	
 				<?php echo widgets_on_template(3);?>
 			</div>	

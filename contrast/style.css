@@ -220,7 +220,7 @@ a {
 
 	#rss-3 ul li {padding-top:10px;}
 	#rss-3 ul li cite {color:#FB0505;}
-	#rss-3 ul {text-align:justify;}
+	#rss-3 ul {text-align:left;}
 	.wp_youtube_gallery{margin-top:25px;}
 	
 
@@ -240,15 +240,15 @@ a {
 	}
 	
 	.left{
-		float: left; width:20%; margin-left:5%;padding-top:7%; 
+		float: left; width:17%; margin-left:5%;padding-top:7%; 
 	}
 	
 	.middle{
-		float: left;width:25%;  ;padding-top:7%; margin-left:13%;
+		float: left;width:20%;  ;padding-top:7%; margin-left:13%;
 	}
 	
 	.right{
-		float: left;width:20%; padding-top:7%; margin-left:10%;
+		float: left;width:17%; padding-top:7%; margin-left:7%;
 	}
 
 
