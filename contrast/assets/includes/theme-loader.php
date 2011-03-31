@@ -4,7 +4,7 @@
 	<source src="<?php echo $_GET['ogg']; ?>" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->
 
 		<script type="text/javascript">
-			var flashvars = { flv : '<?php echo $_GET['ogg']; ?>' };
+			var flashvars = { flv : '<?php echo $_GET["ogg"]; ?>' };
 			var params = { wmode: 'transparent' };
 			swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
 		</script>
