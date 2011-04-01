@@ -7,7 +7,8 @@ Template Name: Social
 	<!-- content start -->
 		
 	<div class="content_wide ">
-		
+		<div class="sliderMask">
+			<div class="sliderContent">
 			
 			<div class="left" style="">
 			
@@ -32,8 +33,8 @@ Template Name: Social
 	
 				<?php echo widgets_on_template(3);?>
 			</div>	
-		
-		
+	</div>
+	</div>
 	</div>
 	<!-- content end -->
 	
