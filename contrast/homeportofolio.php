@@ -28,7 +28,7 @@ $loop = new WP_Query( $args );
 					  		<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } else { ?>
 							<?php //error_log( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) ); ?>
-							<p class="image"><a class="html5video" id="videolink" name="videolink" href="javascript:;" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+							<p class="image"><a class="html5video" id="videolink" name="videolink" href="javascript:;" title="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_fallback')); ?>" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } ?>
 						
 						<p class="details"><?php echo get_the_date(); ?> | <?php echo $category[0]->cat_name; ?></p>
@@ -252,7 +252,7 @@ $loop = new WP_Query( $args );
 					$.ajax({
 						type: 'GET',
 						url: '<?php bloginfo('template_url'); ?>/assets/includes/theme-loader.php',
-						data: 'background_image=' + $(this).attr('rev') + '&ogg=' + $(this).attr('rel') + '&type=html5video',
+						data: 'background_image=' + $(this).attr('rev') + '&ogg=' + $(this).attr('rel') + '&fallback=' + $(this).attr('title') + '&type=html5video',
 						success: function(html) {
 							//console.log('video - ' + html);
 							$('#background').html(html);

@@ -1,14 +1,11 @@
 <?php if ($_GET['type'] == 'html5video') { ?>
 <video id="video_element2" height="auto" width="100%" autoplay="autoplay" loop="loop">
-	<source src="<?php echo $_GET['background_image']; ?>" type="video/mp4" /><!-- Safari / iOS video / IE9   -->
-	<source src="<?php echo $_GET['ogg']; ?>" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->
+	<source src="<?php echo $_GET['background_image']; ?>" type="video/mp4" /><!-- Chrome / Safari / iOS video / IE9   -->
+	<source src="<?php echo $_GET['ogg']; ?>" type="video/ogg" /><!-- Firefox -->
 
-		<script type="text/javascript">
-			var flashvars = { flv : '<?php echo $_GET["ogg"]; ?>' };
-			var params = { wmode: 'transparent' };
-			swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
-		</script>
+	<!-- Fallback to Flash if HTML5 support is not found -->
+	<embed src="http://blip.tv/play/gcMVgcmBAgA%2Em4v" type="application/x-shockwave-flash" width="100%" height="auto" allowscriptaccess="always" allowfullscreen="true"></embed> 
 </video>
 <?php } else { ?>
-<img src="<?php echo $_GET['background_image']; ?>" alt="" />
+<img src="<?php echo $_GET['background_image']; ?>" alt="no video found" />
 <?php } ?>

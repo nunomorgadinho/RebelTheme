@@ -33,10 +33,9 @@
 		<?php } elseif (option('home_background') == '5') { ?>
 			
 			<script type="text/javascript">
-			/*	var flashvars = { flv : '<?php echo option('home_background_flash_video'); ?>' };
+				var flashvars = { flv : '<?php echo option('home_background_flash_video'); ?>' };
 				var params = { wmode: 'transparent' };
 				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
-			*/
 			</script>
 			<video id="video_element" height="100%" width="100%" autoplay="autoplay" loop="loop" src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video')); ?>">
     </video>

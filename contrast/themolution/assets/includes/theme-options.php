@@ -290,6 +290,16 @@ $theme_metaboxes = array(
 				)
 			),
 			array(
+				'type' => 'input-upload',
+				'id' => '_' . THEMEPREFIX . '_' . 'post_background_html5_video_fallback',
+				'name' => 'HTML5 Video Fallback',
+				'desc' => '<p>Enter the file path of the post <b>background HTML5 video</b> (flv).</p>',
+				'related' => array(
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+					'options' => '5'
+				)
+			),
+			array(
 				'type' => 'textarea',
 				'id' => '_' . THEMEPREFIX . '_' . 'post_background_google_maps',
 				'name' => 'Google Maps',
