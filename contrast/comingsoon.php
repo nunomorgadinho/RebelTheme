@@ -17,7 +17,7 @@ global $options;
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/comingsoon.css" type="text/css" media="screen"/>
   <link href="<?php bloginfo('template_directory'); ?>/favicon.ico" rel="icon" type="image/x-icon" />
     <script type="text/javascript" language="JavaScript">
-    TargetDate = "04/04/2011 04:00 PM GMT";
+    TargetDate = "04/04/2011 04:00 PM GMT+1";
     FinishMessage = "<span class='finish-mss'><?php echo $rdy_finish_mssg; ?></span>";
     </script>
 <style type="text/css">
