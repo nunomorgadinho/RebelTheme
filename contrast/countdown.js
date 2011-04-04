@@ -17,7 +17,8 @@ function CountBack(secs) {
 	
 	
   if (secs < 0) {
-    document.getElementById("cntdwn").innerHTML = FinishMessage;
+    document.getElementById("cntdwn").innerHTML = "<div class='plugmsg'>PLUGGING LAST CABLES</div>";
+	Cufon.replace('#cntdwn');
     return;
   }
   DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));

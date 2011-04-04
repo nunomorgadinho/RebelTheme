@@ -141,6 +141,14 @@ p {
 #cntdwn b {
 	font-size: 35px;
 }
+
+.plugmsg {
+	font-size: 20px;
+	text-indent: 35px;
+	padding-top: 7px;
+	
+}
+
 .days, .hours, .minutes, .seconds {
 	position: relative;
 	top: 0px;
