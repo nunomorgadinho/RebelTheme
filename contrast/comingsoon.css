@@ -337,7 +337,8 @@ padding:0;
 	color: #fff;
 }
 #cntdwn { color:#FF0000; 
-position:relative;width:400px;left:30px;
+position:relative;width:400px;
+/*left:30px;*/
 
 }
 .second-head {/*top:5px;left:30px*/}
