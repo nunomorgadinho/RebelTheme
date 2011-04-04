@@ -219,8 +219,12 @@ a {
 **************************************************/
 
 	#rss-3 ul li {padding-top:10px;}
-	#rss-3 ul li cite {color:#FB0505;}
+	#rss-3 ul li cite {color:#C0C0C0;}
 	#rss-3 ul {text-align:left;}
+	
+	.rss-date {color:#C0C0C0; font-style:italic;	}	
+	#rss-3 ul li a {color:#FB0505;}
+	#rss-3 ul li a:hover {color:#FFFFFF;}
 	.wp_youtube_gallery{margin-top:25px;}
 	
 
