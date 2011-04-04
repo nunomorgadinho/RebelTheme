@@ -17,7 +17,7 @@ global $options;
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/comingsoon.css" type="text/css" media="screen"/>
   <link href="<?php bloginfo('template_directory'); ?>/favicon.ico" rel="icon" type="image/x-icon" />
     <script type="text/javascript" language="JavaScript">
-    TargetDate = "04/04/2011 04:00 PM GMT+1";
+    TargetDate = "04/04/2011 03:00 PM GMT";
     FinishMessage = "<span class='finish-mss'><?php echo $rdy_finish_mssg; ?></span>";
     </script>
 <style type="text/css">
@@ -84,6 +84,19 @@ Cufon.replace('.pf_tempesta_seven_compressed_bold', { fontFamily: 'PF Tempesta S
 Cufon.replace('.pf_tempesta_seven_bold', { fontFamily: 'PF Tempesta Seven Bold', hover: true }); 
 </script>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22426440-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
 
@@ -127,4 +140,5 @@ function validate(form_id,email) {
 	      return false;
 	   }
 	}
+>>>>>>> Stashed changes
 </script>
