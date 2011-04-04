@@ -261,12 +261,12 @@ $loop = new WP_Query( $args );
 	
 							//console.log(myVideo);
 							if (typeof myVideo.loop == 'boolean') { // loop supported
-							//  myVideo.loop = true;
+							  myVideo.loop = true;
 							} else { // loop property not supported
-							//  myVideo.bind('ended', function () {
-							 //   this.currentTime = 0;
-							 //   this.play();
-							//  }, false);
+							  myVideo.bind('ended', function () {
+							    this.currentTime = 0;
+							    this.play();
+							  }, false);
 							}
 							
 							//myVideo.play();
