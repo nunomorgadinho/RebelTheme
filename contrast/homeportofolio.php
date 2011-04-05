@@ -43,7 +43,11 @@ $loop = new WP_Query( $args );
 			</div>
 		</div>
 		
-		<?php if (have_posts()) { ?>		
+		<?php if (have_posts()) { ?>
+
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/browserdetect.js"></script>
+		<script type="text/javascript">
+		
 			$(document).ready(function() {
 				
 				
@@ -128,7 +132,7 @@ $loop = new WP_Query( $args );
 				});
 				
 				$('.nav.portfolio .navMask ul.navContent li p.image a[name="videolink"]').click(function() {
-					alert('VIDEO');
+					//alert('VIDEO');
 					$('.loading').fadeIn();
 					$.ajax({
 						type: 'GET',
