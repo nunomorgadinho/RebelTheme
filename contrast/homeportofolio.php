@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 	
 	<!-- content start -->
-	<div class="content">
+	<div class="contentp">
 		
 <?php
 $args = array( 'cat' => option('portfolio_category') );

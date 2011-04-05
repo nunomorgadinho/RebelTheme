@@ -2,6 +2,7 @@
 	
 	<!-- content start -->
 	<div class="content">
+		
 		<?php if (in_category(option('portfolio_category')) || is_category(option('portfolio_category'))) { ?>
 		
 		<div class="nav portfolio">
@@ -263,6 +264,7 @@
 		</div>
 		
 		<?php } ?>
+		
 	</div>
 	<!-- content end -->
 	

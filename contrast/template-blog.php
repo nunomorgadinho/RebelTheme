@@ -7,6 +7,7 @@ Template Name: Blog
 	<!-- content start -->
 		
 	<div class="content">
+		<div class="content-image">
 	
 	<div class= "content_bg">
 	<div class="nav blog" >
@@ -34,6 +35,7 @@ Template Name: Blog
 		</div>	
 		
 	</div>	
+	</div>
 	</div>
 	<!-- content end -->
 	

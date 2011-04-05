@@ -2,6 +2,7 @@
 
 	<!-- content start -->
 	<div class="content">
+		<div class="content-image">
 		<div class="nav blog">
 			<div class="navMask">
 				<ul class="navContent">
@@ -17,6 +18,7 @@
 					<?php endif; ?>
 				</ul>
 			</div>
+		</div>
 		</div>
 	</div>
 	<!-- content end -->

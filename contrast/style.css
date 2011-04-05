@@ -262,6 +262,16 @@ a {
 		float: left;width:17%; padding-top:7%; margin-left:7%;
 	}
 
+	
+	.content-image{
+		width: 530px;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background: url('assets/images/content_BG.png') repeat-y;
+	}
+
 
 	.content {
 	width: 530px;
@@ -270,8 +280,6 @@ a {
 	top: 0px;
 	right: 0px;
 	line-height: 18px;
-	background: url('assets/images/content_BG.png') repeat-y;
-		
 	}
 
 	.content * {
