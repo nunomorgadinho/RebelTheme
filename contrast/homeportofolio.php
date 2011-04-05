@@ -128,7 +128,7 @@ $loop = new WP_Query( $args );
 				});
 				
 				$('.nav.portfolio .navMask ul.navContent li p.image a[name="videolink"]').click(function() {
-					//alert('VIDEO');
+					alert('VIDEO');
 					$('.loading').fadeIn();
 					$.ajax({
 						type: 'GET',
