@@ -8,7 +8,7 @@
     if ( !v ) { // If no, use Flash
 		var flashvars = { flv : '<?php echo $_GET['fallback']; ?>' };
 		var params = { wmode: 'transparent' };
-		swfobject.embedSWF('http://rebelact.me/wp-content/themes/RebelTheme/contrast/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
+		swfobject.embedSWF('http://rebelact.me/wp-content/themes/RebelTheme/contrast/assets/flash/background.swf', 'background', '100%', '100%', '10.0.0', 'expressInstall.swf', flashvars, params);
     }
 	</script>
 </video>
