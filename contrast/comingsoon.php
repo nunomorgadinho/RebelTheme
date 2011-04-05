@@ -140,5 +140,7 @@ function validate(form_id,email) {
 	      return false;
 	   }
 	}
->>>>>>> Stashed changes
 </script>
+
+</body>
+</html>
