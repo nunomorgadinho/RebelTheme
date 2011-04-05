@@ -13,7 +13,7 @@ Template Name: Social
 			<div class="left" style="">
 			
 				<img src="<?php bloginfo('template_url');?>/assets/images/youtube.png" />
-			
+				
 				<?php echo widgets_on_template(1);?>
 			</div>
 					
@@ -27,12 +27,7 @@ Template Name: Social
 	
 		
 	
-			<div class="right" >	
-	
-				<img src="<?php bloginfo('template_url');?>/assets/images/vimeo.png" />
-	
-				<?php echo widgets_on_template(3);?>
-			</div>	
+			
 	</div>
 	</div>
 	</div>

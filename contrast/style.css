@@ -218,13 +218,19 @@ a {
 	CONTENT
 **************************************************/
 
+	.yvideo{margin-top:30px;
+		margin-left:-20px;
+	}
+	
+	#Widgets_on_Pages_1 ul li{ margin-top:30px;}
+
 	#rss-3 ul li {padding-top:10px;}
-	#rss-3 ul li cite {color:#C0C0C0;}
+	#rss-3 ul li cite {color:#FB0505;}
 	#rss-3 ul {text-align:left;}
 	
 	.rss-date {color:#C0C0C0; font-style:italic;	}	
-	#rss-3 ul li a {color:#FB0505;}
-	#rss-3 ul li a:hover {color:#FFFFFF;}
+	#rss-3 ul li a {color:#FFFFFF;}
+	#rss-3 ul li a:hover {color:#C0C0C0;}
 	.wp_youtube_gallery{margin-top:25px;}
 	
 
@@ -234,7 +240,8 @@ a {
 	width: 70%;
 	height: 100%;
 	position: absolute;
-	top: 0px;
+	/*top: 0px;*/
+	bottom:30px;
 	right: 0px;
 	line-height: 18px;
 
@@ -244,15 +251,25 @@ a {
 	}
 	
 	.left{
-		float: left; width:17%; margin-left:5%;padding-top:7%; 
+		float: left; width:20%; margin-left:5%;padding-top:17%; 
 	}
 	
 	.middle{
-		float: left;width:20%;  ;padding-top:7%; margin-left:13%;
+		float: left;width:36%; height:50px; ;padding-top:17%; margin-left:25%;
 	}
 	
 	.right{
 		float: left;width:17%; padding-top:7%; margin-left:7%;
+	}
+
+	
+	.content-image{
+		width: 530px;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background: url('assets/images/content_BG.png') repeat-y;
 	}
 
 
@@ -263,7 +280,6 @@ a {
 	top: 0px;
 	right: 0px;
 	line-height: 18px;
-		
 	}
 
 	.content * {
@@ -379,7 +395,7 @@ a {
 .jScrollPaneContainer {
 	position: relative;
 	overflow: hidden;
-	background: url('assets/images/content_BG.png') repeat-y;
+	/*background: url('assets/images/content_BG.png') repeat-y;*/
 }
 
 .jScrollPaneTrack,
@@ -711,7 +727,7 @@ form#commentform {
 
 .footer {
 	width: 100%;
-	height: 30px;
+/*	height: 30px;*/
 	background: url('assets/images/footer_BG.png') repeat-x;
 	position: absolute;
 	bottom: 0px;

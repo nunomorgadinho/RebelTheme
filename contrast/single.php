@@ -2,6 +2,7 @@
 
 	<!-- content start -->
 	<div class="content">
+	<div class="content-image">
 		<div class="sliderMask">
 			<div class="sliderContent">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -22,6 +23,7 @@
 				<?php endif; ?>
 
 			</div>
+		</div>
 		</div>
 	</div>
 	<!-- content end -->

@@ -2,6 +2,7 @@
 	<!-- content start -->
 		
 	<div class="content">
+		<div class="content-image">
 		<div class="sliderMask">
 			<div class="sliderContent"> 
 	
@@ -16,6 +17,7 @@
 				<p><?php _e('Nothing found.'); ?></p>
 				<?php endif; ?>
 			</div>
+		</div>
 		</div>
 	</div>
 	<!-- content end -->
