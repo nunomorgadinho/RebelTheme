@@ -316,7 +316,6 @@ function breadcrumbs($args = false) {
 **************************************************/
 
 function image($args) {
-	
 	global
 	$blog_id;
 	

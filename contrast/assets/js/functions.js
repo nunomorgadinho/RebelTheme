@@ -61,7 +61,7 @@ function menu_pos() {
 **************************************************/
 
 function background_resize() {
-	
+	return;
 	var image = '#background img';
 	var ratio = ($(image).height() / $(image).width()).toFixed(2);
 	var browserwidth = $(window).width();

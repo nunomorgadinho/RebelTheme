@@ -57,6 +57,7 @@
 			
 		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '2') { ?>
 			
+			
 			<img src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_image')); ?>" alt="" />
 			
 			<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background_image_pattern')) == '1') { ?>
