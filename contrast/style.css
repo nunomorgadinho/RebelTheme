@@ -214,6 +214,22 @@ a {
 		float: right;
 	}
 
+
+/**************************************************
+	CONTROLS
+**************************************************/
+
+.controls{
+	width:160px;
+	height:21px;
+	bottom:5px;
+	background: url('assets/images/lang_BG.png') no-repeat;
+}
+
+.lang{padding-top:5px;}
+.en{ margin-left:33px;}
+.pt{margin-left:5px;}
+
 /**************************************************
 	CONTENT
 **************************************************/

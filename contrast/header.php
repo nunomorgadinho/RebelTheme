@@ -64,6 +64,7 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/swfobject.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/functions.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/custom-form-elements.js"></script>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="<?php echo option('favicon'); ?>" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -90,7 +91,48 @@
 		</div>
 		<!-- logo end -->
 		
+		<?php 
+					
+					$en = false;
+					if(ICL_LANGUAGE_CODE== 'en')
+						$en=true;
+					
+					
+						
+					$source_off = '/assets/images/off.png'; 	
+					$source_on = '/assets/images/on.png';
+					
+					if($en)
+					{
+						$source_en = $source_on;
+						$source_pt = $source_off;
+					}
+					else
+					{	$source_en = $source_off;
+						$source_pt = $source_on;		
+					}				
+				?>
+		
+		
 		<div class="navigation" <?php if (is_page('9')) { echo 'style="opacity:0.1"';} ?>>
+		<?php $curr_page = substr("http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'], 0,strpos("http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI'], '/?'))?>
+	
+			<div class="controls">
+			
+				
+			
+			<div class="lang">	
+				<a class="en" href="<?php echo $curr_page."?lang=en"; ?>">
+					<img id="en" width="10" height="10" alt="pt-pt" src="<?php echo bloginfo('template_url').$source_en; ?>" onclick="document.getElementById('en').src='<?php bloginfo('template_url'); ?>/assets/images/on.png'; document.getElementById('pt').src='<?php bloginfo('template_url'); ?>/assets/images/off.png';">
+				</a>
+				<a class="pt" href="<?php echo $curr_page."?lang=pt-pt"; ?>">
+					<img id="pt" width="10" height="10" alt="pt-pt" src="<?php echo bloginfo('template_url').$source_pt; ?>" onclick="document.getElementById('pt').src='<?php bloginfo('template_url'); ?>/assets/images/on.png'; document.getElementById('en').src='<?php bloginfo('template_url'); ?>/assets/images/off.png';">
+				</a>
+			</div>	
+				
+				
+			</div>
+		
 			<!-- menu start -->
 			<?php wp_nav_menu(array(
 				'container' => '',
