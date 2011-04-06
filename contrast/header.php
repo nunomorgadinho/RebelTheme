@@ -130,6 +130,15 @@
 				</a>
 			</div>	
 				
+			
+			<div class="play">
+				<img id="vcontrol" width="10" height="10" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/play.png'; ?>" onclick="  if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/play.png') document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png'; else document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/play.png'; ">
+			</div>	
+				
+			<div class="sound">
+				<img id="scontrol" width="10" height="10" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/sound.png'; ?>" onclick="  if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/sound.png'){ document.getElementById('scontrol').src='<?php bloginfo('template_url'); ?>/assets/images/soundOff.png'; document.getElementById('scontrol').width=17; document.getElementById('scontrol').height=17;} else {document.getElementById('scontrol').src='<?php bloginfo('template_url'); ?>/assets/images/sound.png';  document.getElementById('scontrol').width=10; document.getElementById('scontrol').height=10;} ">
+			</div>	
+				
 				
 			</div>
 		
