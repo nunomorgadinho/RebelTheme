@@ -300,7 +300,7 @@ a {
 	height: 100%;
 	position: absolute;
 	bottom:30px;
-	top: 0px;
+	padding-top: 30px;
 	right: 0px;
 	line-height: 18px;
 	}
