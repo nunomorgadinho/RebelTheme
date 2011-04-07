@@ -52,7 +52,7 @@ $loop = new WP_Query( $args );
 				/*
 				Hide controls in IE8
 				*/
-				alert('version = ' + BrowserDetect.version);
+			//	alert('version = ' + BrowserDetect.version);
 				if ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version == "8")) {
 					document.getElementById('vcontrol').style.display = 'none';
 					document.getElementById('scontrol').style.display = 'none';
