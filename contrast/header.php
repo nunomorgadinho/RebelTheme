@@ -34,6 +34,13 @@
 		@import url('<?php bloginfo('template_url'); ?>/assets/css/style-IE7.css');
 	</style>
 	<![endif]-->
+
+	<!--[if IE 8]>
+	<style type="text/css" title="style-IE7" media="screen">
+		@import url('<?php bloginfo('template_url'); ?>/assets/css/style-IE8.css');
+	</style>
+	<![endif]-->
+	
 	
 	<?php if (option('logo_position') == '1') { ?>
 	<style type="text/css">
