@@ -36,7 +36,7 @@
 	<![endif]-->
 
 	
-	<?php if(is_front_page() || strpos($_SERVER['REQUEST_URI'],'category')) { ?>
+	<?php if(is_front_page() || strpos($_SERVER['REQUEST_URI'],'category') || strpos($_SERVER['REQUEST_URI'],'portofolio')) { ?>
 	<!--[if IE 8]>
 	<style type="text/css" title="style-IE7" media="screen">
 		@import url('<?php bloginfo('template_url'); ?>/assets/css/style-IE8.css');
@@ -94,7 +94,9 @@
 	<div class="header">
 		<!-- logo start -->
 		<?php $tag_logo = (is_home() || is_front_page()) ? 'h1' : 'div'; ?>
-		<<?php echo $tag_logo; ?> class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></<?php echo $tag_logo; ?>>
+		<<?php echo $tag_logo; ?> class="logo">
+			<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+		</<?php echo $tag_logo; ?>>
 		<div class="videologo" style="opacity:0" >
 		<img src="<?php bloginfo('template_url'); ?>/assets/images/oculos_rebel_white.png" style="margin-left: 25px; margin-top: 30px;" alt="glasses"></img>
 		<img src="<?php bloginfo('template_url'); ?>/assets/images/Rebel-Logo.png" style="margin-left: 8px; margin-top: 30px;" alt="glasses"></img>
