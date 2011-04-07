@@ -141,7 +141,9 @@ $loop = new WP_Query( $args );
 						success: function(html) {
 							//console.log('video - ' + html);
 							$('#background').html(html);
-
+							
+							document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png';
+							
 							var myVideo = $('#background video');
 	
 							//console.log(myVideo);
