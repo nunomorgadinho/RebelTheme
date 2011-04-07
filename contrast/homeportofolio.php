@@ -52,8 +52,10 @@ $loop = new WP_Query( $args );
 				/*
 				Hide controls in IE8
 				*/
-				if (BrowserDetect.browser == "Explorer")
+				if (BrowserDetect.browser == "Explorer") {
 					document.getElementById('vcontrol').style.display = 'none';
+					document.getElementById('scontrol').style.display = 'none';
+				}
 				
 				/*
 				Inicio
