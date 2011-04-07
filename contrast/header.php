@@ -184,7 +184,7 @@
 			{
 				alert('stop');
 				var flashMovie=getFlashMovieObject("background");
-				flashMovie.testPause();
+				flashMovie.FullScreenVideoPlayer();
 			}
 			 
 			function PlayFlashMovie()
