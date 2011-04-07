@@ -8,7 +8,7 @@
 	
 				<?php 
 					if (have_posts()) : while (have_posts()) : the_post(); ?>
-				
+				<div style="padding-top: 32px"></div>
 				<h1><?php the_title(); ?></h1>
 				
 				<?php the_content(__('(Read More &raquo;)')); ?>
