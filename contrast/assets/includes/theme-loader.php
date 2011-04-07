@@ -10,7 +10,7 @@
 		var params = { wmode: 'transparent' };
 		swfobject.embedSWF('http://rebelact.me/wp-content/themes/RebelTheme/contrast/assets/flash/background.swf', 'background', '100%', '100%', '10.0.0', 'expressInstall.swf', flashvars, params);
     }
-	</script>
+</script>
 <?php } else { ?>
 <img src="<?php echo $_GET['background_image']; ?>" alt="no video found" />
 <?php } ?>

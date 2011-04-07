@@ -145,15 +145,18 @@ $loop = new WP_Query( $args );
 							document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png';
 							
 							var myVideo = $('#background video');
-	
-							//console.log(myVideo);
-							if (typeof myVideo.loop == 'boolean') { // loop supported
-							  myVideo.loop = true;
-							} else { // loop property not supported
-							  myVideo.bind('ended', function () {
-							    this.currentTime = 0;
-							    this.play();
-							  }, false);
+
+							if (BrowserDetect.browser == "Firefox")
+							{
+								//console.log(myVideo);
+								if (typeof myVideo.loop == 'boolean') { // loop supported
+								  myVideo.loop = true;
+								} else { // loop property not supported
+								  myVideo.bind('ended', function () {
+								    this.currentTime = 0;
+								    this.play();
+								  }, false);
+								}
 							}
 							
 							//myVideo.play();
