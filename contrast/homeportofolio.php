@@ -140,7 +140,7 @@ $loop = new WP_Query( $args );
 				
 				$('.nav.portfolio .navMask ul.navContent li p.image a[name="videolink"]').click(function() {
 					//alert('VIDEO');
-					if (BrowserDetect.browser == "Explorer")
+					if ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version == "8"))
 						return;
 					
 					$('.loading').fadeIn();
