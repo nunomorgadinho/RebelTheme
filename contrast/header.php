@@ -183,7 +183,7 @@
 			function StopFlashMovie()
 			{
 				var flashMovie=getFlashMovieObject("background");
-				flashMovie.togglePause();
+				flashMovie.Stop();
 			}
 			 
 			function PlayFlashMovie()
