@@ -36,12 +36,13 @@
 	<![endif]-->
 
 	
-
+	<?php if(is_front_page() || strpos($_SERVER['REQUEST_URI'],'category') || strpos($_SERVER['REQUEST_URI'],'portofolio')) { ?>
 	<!--[if IE 8]>
 	<style type="text/css" title="style-IE7" media="screen">
 		@import url('<?php bloginfo('template_url'); ?>/assets/css/style-IE8.css');
 	</style>
 	<![endif]-->
+	<?php } ?>
 	
 	
 	<?php if (option('logo_position') == '1') { ?>
