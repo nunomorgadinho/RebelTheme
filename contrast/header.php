@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 	
 	<?php if (option('seo') == '1') { ?>
 	<meta name="author" content="<?php echo option('seo_author'); ?>" />
