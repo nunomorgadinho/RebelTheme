@@ -299,7 +299,8 @@ a {
 	width: 530px;
 	height: 100%;
 	position: absolute;
-	top: 0px;
+	bottom:30px;
+/*	top: 0px;*/
 	right: 0px;
 	line-height: 18px;
 	}
