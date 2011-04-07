@@ -162,40 +162,10 @@
 				}
 			}
 
-			function getFlashMovieObject(movieName)
-			{
-			  if (window.document[movieName]) 
-			  {
-			    return window.document[movieName];
-			  }
-			  if (navigator.appName.indexOf("Microsoft Internet")==-1)
-			  {
-			    if (document.embeds && document.embeds[movieName])
-			      return document.embeds[movieName]; 
-			  }
-			  else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
-			  {
-			    return document.getElementById(movieName);
-			  }
-			}
-			 
-			function StopFlashMovie()
-			{
-				alert('stop');
-				var flashMovie=getFlashMovieObject("background");
-				flashMovie.FullScreenVideoPlayer();
-			}
-			 
-			function PlayFlashMovie()
-			{
-				var flashMovie=getFlashMovieObject("background");
-				flashMovie.Play();
-				//embed.nativeProperty.anotherNativeMethod();
-			}
 			</script>	
 			
 			<div class="play">
-				<img id="vcontrol" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/pause.png'; ?>" onclick=" StopFlashMovie(); /*playPause();*/  if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/play.png') document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png'; else document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/play.png'; ">
+				<img id="vcontrol" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/pause.png'; ?>" onclick=" playPause();  if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/play.png') document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png'; else document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/play.png'; ">
 			</div>	
 				
 			<div class="sound">

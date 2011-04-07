@@ -49,7 +49,10 @@ $loop = new WP_Query( $args );
 		<script type="text/javascript">
 		
 			$(document).ready(function() {
-				
+				/*
+				Hide controls in IE8
+				*/
+				document.getElementById('vcontrol').hide();
 				
 				/*
 				Inicio
