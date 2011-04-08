@@ -12,14 +12,14 @@ Template Name: Social
 			
 			<div class="left" style="">
 			
-				<img src="<?php bloginfo('template_url');?>/assets/images/youtube.png" />
+				<img src="<?php bloginfo('template_url');?>/assets/images/youtube.png" style="margin-left:50px;"/>
 				
 				<?php echo widgets_on_template(1);?>
 			</div>
 					
 			<div class="middle" >	
 			
-				<img src="<?php bloginfo('template_url');?>/assets/images/facebook.png" />
+				<img src="<?php bloginfo('template_url');?>/assets/images/facebook.png" style="margin-left:-40px;"/>
 	
 		
 				<?php echo widgets_on_template(2);?>
