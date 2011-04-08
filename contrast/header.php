@@ -122,7 +122,11 @@
 					else
 					{	$source_en = $source_off;
 						$source_pt = $source_on;		
-					}				
+					}	
+
+				$langs = icl_get_languages();	
+				$pt_url = $langs['pt-pt']['url'];
+				$en_url = $langs['en']['url'];
 				?>
 		
 		
@@ -134,10 +138,10 @@
 				
 			
 			<div class="lang">	
-				<a class="en" href="<?php echo $curr_page."?lang=en"; ?>">
+				<a class="en" href="<?php echo $en_url; ?>">
 					<img id="en" width="10" height="10" alt="pt-pt" src="<?php echo bloginfo('template_url').$source_en; ?>" onclick="document.getElementById('en').src='<?php bloginfo('template_url'); ?>/assets/images/on.png'; document.getElementById('pt').src='<?php bloginfo('template_url'); ?>/assets/images/off.png';">
 				</a>
-				<a class="pt" href="<?php echo $curr_page."?lang=pt-pt"; ?>">
+				<a class="pt" href="<?php echo $pt_url; ?>">
 					<img id="pt" width="10" height="10" alt="pt-pt" src="<?php echo bloginfo('template_url').$source_pt; ?>" onclick="document.getElementById('pt').src='<?php bloginfo('template_url'); ?>/assets/images/on.png'; document.getElementById('en').src='<?php bloginfo('template_url'); ?>/assets/images/off.png';">
 				</a>
 			</div>	
