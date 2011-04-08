@@ -84,7 +84,7 @@
 			
 			<script type="text/javascript">
 			if ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version == "8")) {
-				var flashvars = { flv : '<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_flash_video')); ?>' };
+				var flashvars = { flv : '<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_fallback')); ?>' };
 				var params = { wmode: 'transparent' };
 				swfobject.embedSWF('<?php bloginfo('template_url'); ?>/assets/flash/background.swf', 'background', '100%', '100%', '9.0.0', 'expressInstall.swf', flashvars, params);
 			}
