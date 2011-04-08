@@ -184,7 +184,7 @@
 				'container' => '',
 				'menu_class' => 'menu',
 				'theme_location' => 'menu-header',
-				'menu' => '4'
+				'menu' => '3'
 			)); ?>
 			<!-- menu end -->
 			
