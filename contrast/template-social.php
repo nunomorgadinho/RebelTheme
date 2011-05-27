@@ -25,7 +25,13 @@ Template Name: Social
 				<?php echo widgets_on_template(2);?>
 			</div>	
 	
-		
+				<div class="right" >	
+
+					<img src="<?php bloginfo('template_url');?>/assets/images/vimeo.png" style="margin-left:-40px;"/>
+
+
+					<?php echo widgets_on_template(3);?>
+				</div>
 	
 			
 	</div>

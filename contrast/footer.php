@@ -1,6 +1,7 @@
 
 	<!-- footer start -->
 	<div class="footer">
+		
 		<?php if (option('contact_social') == '1') { ?>
 		<ul class="social">
 			<?php if (option('contact_social_rss') == '1') { ?><li><a href="<?php bloginfo('rss_url'); ?>" class="social-rss">RSS</a></li><?php } ?>
