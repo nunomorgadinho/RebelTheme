@@ -18,7 +18,7 @@ function blog_height() {
 
 function portfolio_height() {
 	
-	$('.nav.portfolio').height($(window).height());
+	$('.nav.portfolio').height($(window).height()-120);
 	
 	if ($('.nav.portfolio .navContent').height() < $(window).height()) {
 		$('.nav.portfolio .navContent').css('top', ($(window).height() - $('.nav.portfolio .navContent').height()) / 2);

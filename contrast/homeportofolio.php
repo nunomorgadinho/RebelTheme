@@ -9,6 +9,9 @@
 	<div class="contentp">
 		
 <?php
+
+$original_page_title = $post->ID;
+
 $args = array( 'cat' => option('portfolio_category') );
 $loop = new WP_Query( $args );
 
@@ -24,11 +27,11 @@ $loop = new WP_Query( $args );
 						<h4><?php the_title(); ?></h4>
 						
 						<?php if ( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) == '' ) { ?>		
-							<?php //error_log( image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)) ); ?>																
-					  		<p class="image"><a href="javascript:;" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+							<?php $youtube_id = meta(array('id' => $post->ID, 'meta' => 'post_background_youtube_video')); ?>																
+					  		<p class="image"><a href="/?id=<?php echo $youtube_id; ?>" rel="<?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'tag' => false)); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } else { ?>
-							<?php //error_log( meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')) ); ?>
-							<p class="image"><a class="html5video" id="videolink" name="videolink" href="javascript:;" title="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_fallback')); ?>" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
+							<?php $youtube_id = meta(array('id' => $post->ID, 'meta' => 'post_background_youtube_video')); ?>
+							<p class="image"><a class="html5video" id="videolink" name="videolink" href="/?id=<?php echo $youtube_id; ?>" title="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_fallback')); ?>" rev="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_mp4')); ?>" rel="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_html5_video_ogg')); ?>"><?php echo image(array('image' => get_the_post_thumbnail($post->ID), 'width' => 150, 'height' => 75)); ?></a></p>
 						<?php } ?>
 						
 						<p class="details"><?php echo get_the_date(); ?> | <?php echo $category[0]->cat_name; ?></p>
@@ -149,12 +152,15 @@ $loop = new WP_Query( $args );
 					if ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version == "8"))
 						return;
 					
-					$('.loading').fadeIn();
+					//$('.loading').fadeIn();
 					$.ajax({
 						type: 'GET',
 						url: '<?php bloginfo('template_url'); ?>/assets/includes/theme-loader.php',
 						data: 'background_image=' + $(this).attr('rev') + '&ogg=' + $(this).attr('rel') + '&fallback=' + $(this).attr('title') + '&type=html5video',
 						success: function(html) {
+
+							RETURN;
+							
 							//console.log('video - ' + html);
 							$('#background').html(html);
 							

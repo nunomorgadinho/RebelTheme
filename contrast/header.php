@@ -190,13 +190,7 @@ Produção de vídeos, Vídeos Corporativos, Produção de Contéudos
 
 			</script>	
 			
-			<div class="play">
-				<img id="vcontrol" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/pause.png'; ?>" onclick=" playPause();  if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/play.png') document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/pause.png'; else document.getElementById('vcontrol').src='<?php bloginfo('template_url'); ?>/assets/images/play.png'; ">
-			</div>	
-				
-			<div class="sound">
-				<img id="scontrol" alt="play-stop" src="<?php echo bloginfo('template_url').'/assets/images/sound.png'; ?>" onclick=" unmuteMute(); if(this.src=='<?php bloginfo('template_url'); ?>/assets/images/sound.png'){ document.getElementById('scontrol').src='<?php bloginfo('template_url'); ?>/assets/images/soundOff.png'; } else {document.getElementById('scontrol').src='<?php bloginfo('template_url'); ?>/assets/images/sound.png'; } ">
-			</div>	
+			
 				
 				
 			</div>

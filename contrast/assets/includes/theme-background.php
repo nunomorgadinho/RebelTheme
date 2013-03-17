@@ -6,7 +6,8 @@
 
 <!-- background start -->
 <div id="background">
-	<?php if (is_home()) { ?>
+
+	<?php if (is_front_page()) { ?>
 			
 		<?php if (option('home_background') == '1') { ?>
 			
@@ -53,9 +54,19 @@
 			<?php } ?>
 			
 			<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo option('home_background_google_maps'); ?>"></iframe>
-		<?php } ?>
+		<?php } elseif (option('home_background') == '6') { 
+
+			$youtube_id = meta(array('id' => $original_page_title, 'meta' => 'post_background_youtube_video')); 
+			
+			if (isset($_REQUEST['id']) && (!empty($_REQUEST['id']))) {
+				$youtube_id = $_REQUEST['id'];
+			}
+			?>
 		
-	<?php } else {  ?>
+		<iframe width="100%" height="97%" src="http://www.youtube.com/embed/<?php echo $youtube_id; ?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+		
+	<?php } 
+	} else {  ?>
 		
 		
 		<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '1') { ?>
@@ -90,6 +101,12 @@
 			}
 			</script>
 		
+		<?php } elseif (meta(array('id' => $original_page_title, 'meta' => 'post_background')) == '6') { 
+
+			$youtube_id = meta(array('id' => $original_page_title, 'meta' => 'post_background_youtube_video')); ?>
+		
+		<iframe width="100%" height="97%" src="http://www.youtube.com/embed/<?php echo $youtube_id; ?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
 		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '4') { ?>
 			
 			<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background_google_maps_gradient')) == '1') { ?>
@@ -102,5 +119,10 @@
 			<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_google_maps')); ?>"></iframe>
 		<?php } ?>
 	<?php } ?>
+
+
+<!-- ESTOU AQUI <?php echo $original_page_title."/"; echo meta(array('id' => $original_page_title, 'meta' => 'post_background')); ?>-->
+<!-- <iframe width="100%" height="97%" title="0" src="http://player.vimeo.com/video/36537379"  webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>  -->
+
 </div>
 <!-- background end -->

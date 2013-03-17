@@ -75,6 +75,10 @@ $theme_metaboxes = array(
 					array(
 						'value' => '5',
 						'label' => 'HTML5 Video'
+					),
+					array(
+						'value' => '6',
+						'label' => 'Youtube Video'
 					)
 				),
 				'std' => '0'
@@ -152,6 +156,16 @@ $theme_metaboxes = array(
 				)
 			),
 			array(
+					'type' => 'textarea',
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background_youtube_video',
+					'name' => 'Youtube Video',
+					'desc' => '<p>Enter the ID of the Youtube video.</p>',
+					'related' => array(
+							'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+							'options' => '6'
+					)
+			),
+			array(
 				'type' => 'radio',
 				'id' => '_' . THEMEPREFIX . '_' . 'post_background_google_maps_gradient',
 				'name' => 'Gradient Effect',
@@ -213,6 +227,10 @@ $theme_metaboxes = array(
 					array(
 						'value' => '5',
 						'label' => 'HTML5 Video'
+					),
+					array(
+						'value' => '6',
+						'label' => 'Youtube Video'
 					)
 				),
 				'std' => '0'
@@ -298,6 +316,16 @@ $theme_metaboxes = array(
 					'id' => '_' . THEMEPREFIX . '_' . 'post_background',
 					'options' => '5'
 				)
+			),
+			array(
+					'type' => 'textarea',
+					'id' => '_' . THEMEPREFIX . '_' . 'post_background_youtube_video',
+					'name' => 'Youtube Video',
+					'desc' => '<p>Enter the ID of the Youtube video.</p>',
+					'related' => array(
+							'id' => '_' . THEMEPREFIX . '_' . 'post_background',
+							'options' => '6'
+					)
 			),
 			array(
 				'type' => 'textarea',
@@ -903,6 +931,10 @@ $theme_options = array(
 				'value' => '4',
 				'label' => 'Google Maps'
 			),
+				array(
+						'value' => '6',
+						'label' => 'Youtube Video'
+				),
 		),
 		'std' => '0'
 	),
@@ -968,6 +1000,16 @@ $theme_options = array(
 			'options' => '4'
 		)
 	),
+		array(
+				'type' => 'textarea',
+				'id' => THEMEPREFIX . '_' . 'home_background_youtube_video',
+				'name' => 'Youtube Video',
+				'desc' => '<p>Enter the <b>ID</b> of the Youtube video.</p>',
+				'related' => array(
+						'id' => THEMEPREFIX . '_' . 'home_background',
+						'options' => '6'
+				)
+		),
 	array(
 		'type' => 'radio',
 		'id' => THEMEPREFIX . '_' . 'home_background_google_maps_gradient',
