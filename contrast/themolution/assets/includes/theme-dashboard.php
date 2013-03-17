@@ -77,6 +77,6 @@ function dashboard_setup() {
 	}
 }
 
-add_action('wp_dashboard_setup', 'dashboard_setup');
+//	add_action('wp_dashboard_setup', 'dashboard_setup');
 
 ?>

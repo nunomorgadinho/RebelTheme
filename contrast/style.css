@@ -119,7 +119,7 @@ a {
 .navigation {
 	text-transform: uppercase;
 	position: absolute;
-	z-index: 10;
+	z-index: 99999;
 	display: none;
 }
 	
@@ -161,7 +161,7 @@ a {
 			.navigation ul.menu li ul li ul {
 				margin: 36px 0px 0px 0px;
 				position: absolute;
-				z-index: 10;
+				z-index: -10;
 				display: none;
 			}
 				
@@ -328,7 +328,7 @@ a {
 	}
 	
 	.content a {
-			background: #FFFFFF; 
+			background-color: #FFFFFF; 
 			color: #000000;
 			text-decoration:none;
 			}
@@ -351,11 +351,11 @@ a {
 	
 	.content h3.details {
 		color: #FFFFFF;
-		margin-top: -30px;
-		
+		margin-top: -15px;
+		line-height:13px;
 		white-space: nowrap;
 		font-size:13px;
-		float:left;
+		float:right;
 	}
 	
 		.content h3.details span.cats {
@@ -866,6 +866,7 @@ form#commentform {
 	top: 0px;
 	left: 0px;
 	z-index: -1;
+/*	display:none;*/
 	text-align: center;
 }
 
@@ -920,3 +921,57 @@ form#commentform {
 
 .ngg-gallery-thumbnail a { padding: 0px !important; }
 .ngg-gallery-thumbnail-box, .ngg-gallery-thumbnail, .ngg-gallery-thumbnail a, .ngg-gallery-thumbnail a img { clear: none !important; }
+
+
+/*Handling Facebook*/
+.FBConnectButton {
+	line-height:auto !important;
+		background-color:#879AC0 !important;
+}
+
+
+
+/* max device width */
+@media screen and (max-device-width: 480px) {
+	.iphone {
+		background: #ccc;
+	}
+	#background video {
+			width: 50% !important;
+			height: 50% !important;
+			font-size: 0px;
+			position: absolute;
+			top: 100px;
+			left: 200px;
+			z-index: -1;
+			text-align: center;
+    }
+	.content_wide {
+		width: 85%;
+		height: 100%;
+		position: absolute;
+		bottom:30px;
+		line-height: 18px;
+		margin-top: 80px;
+		background: url('assets/images/social_BG.png') repeat-y;
+		text-align:center;
+		display:inline-block !important;
+	}
+	.sliderContent{
+		padding: 0px 30px 30px 0px;
+		margin-left:50px;
+		display:inline-block !important;
+	}
+	
+	.left{
+		 width:20%; margin-left:0%;padding-top:17%; display:inline-block !important;
+	}
+	
+	.middle{
+		width:25%; height:50px; ;padding-top:17%; margin-left:18%;display:inline-block !important;
+	}
+	
+	.right{
+		width:17%; margin-top:-55px; margin-left:48%;display:inline-block !important;
+	}
+}

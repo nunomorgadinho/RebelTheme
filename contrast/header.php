@@ -9,7 +9,12 @@
 	<meta name="description" content="<?php echo option('seo_description'); ?>" />
 	<meta name="robots" content="<?php echo option('seo_robots') == '1' ? 'all' : 'noindex'; ?>" />
 	<?php } ?>
+       <meta name="google-site-verification" content="WWpP_GOFRmGXKvumrtn7NHdJ7tIInh_P0BKFIrPS6eQ" />
+	
+	
 	<?php wp_head(); ?>
+	
+	
 	
 	<title><?php if (option('seo_title') == '0' || option('seo') == '0') {
 		bloginfo('name');
@@ -85,10 +90,27 @@
 	<?php wp_get_archives('type=monthly&format=link'); ?>
 	<?php wp_head(); ?>
 	
+	<?php 
+		$page_template = get_page_template();
+		if(strpos($page_template,'homeportofolio.php'))
+		{
+	?>
+		<meta property="og:title" content="We turn ideas into images!"/>
+		<meta property="og:description" content="Media lab that brings together brands and cool creators."/>
+		<meta property="og:site_name" content="RebelAct"/>
+	    <meta property="og:image" content='http://www.rebelact.tv/wp-content/uploads/2011/03/Screen-shot-2011-03-29-at-10.52.09-PM.png'/>
+		
+	<?php		
+		}
+	?>
+	
 </head>
 
 <body <?php body_class($body_class); ?>>
 
+<div style="display:none">
+Produção de vídeos, Vídeos Corporativos, Produção de Contéudos
+</div>
 <div class="container"> 
 	<!-- header start -->
 	<div class="header">

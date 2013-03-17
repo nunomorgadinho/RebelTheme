@@ -52,7 +52,7 @@ $loop = new WP_Query( $args );
 				/*
 				Hide controls in IE8
 				*/
-			//	alert('version = ' + BrowserDetect.version);
+				//alert('version = ' + BrowserDetect.browser);
 				if ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version == "8")) {
 					document.getElementById('vcontrol').style.display = 'none';
 					document.getElementById('scontrol').style.display = 'none';
@@ -61,12 +61,18 @@ $loop = new WP_Query( $args );
 				/*
 				Inicio
 				*/
-				$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0', right: '-200px'}, {queue:false, duration: 100});
-				$('.navigation, .footer').animate({opacity: '0'}, {queue:false, duration: 100});
-				$('.footer').animate({opacity: '0'}, {queue:false, duration: 100});
-				$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
-				$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
+				if ((BrowserDetect.browser == "Safari") && (BrowserDetect.version == "5")) {
+					show_menus();
+				} else {
+				//	$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0', right: '-200px'}, {queue:false, duration: 100});
+					$('.nav.portfolio .navMask ul.navContent').animate({right: '-200px'}, {queue:false, duration: 100});
+					$('.navigation, .footer').animate({opacity: '0'}, {queue:false, duration: 100});
+					$('.footer').animate({opacity: '0'}, {queue:false, duration: 100});
+					$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
+					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
+				}
 
+						
 				function show_menus() {
 					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '1', right: '-200px'}, {queue:false, duration: 300});
 					$('.navigation, .footer').animate({opacity: '1'}, {queue:false, duration: 100});
@@ -75,7 +81,7 @@ $loop = new WP_Query( $args );
 				}
 				
 				function hide_menus() {
-					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0', right: '-200px'}, {queue:false, duration: 100});
+				//	$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0', right: '-200px'}, {queue:false, duration: 100});
 					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
 					$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
 					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 300});
@@ -114,7 +120,7 @@ $loop = new WP_Query( $args );
 				function(){
 					$('.nav.portfolio .navMask ul.navContent').animate({right: '-200px'}, {queue:false, duration: 100});
 					$('.navigation, .footer').animate({opacity: '0.1'}, {queue:false, duration: 100});
-					$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0'}, {queue:false, duration: 300});
+					//$('.nav.portfolio .navMask ul.navContent').animate({opacity: '0'}, {queue:false, duration: 300});
 					$('.logo').animate({opacity: '0'}, {queue:false, duration: 100});
 					$('.videologo').animate({opacity: '1'}, {queue:false, duration: 100});
 				});

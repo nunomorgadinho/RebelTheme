@@ -55,7 +55,8 @@
 			<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo option('home_background_google_maps'); ?>"></iframe>
 		<?php } ?>
 		
-	<?php } else { ?>
+	<?php } else {  ?>
+		
 		
 		<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '1') { ?>
 			
@@ -63,9 +64,8 @@
 				#background { background: <?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_color')); ?>; }
 			</style>
 			
-		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '2') { ?>
-			
-			
+		<?php } elseif (meta(array('id' => $post->ID, 'meta' => 'post_background')) == '2' || meta(array('id' => $post->ID, 'meta' => 'post_background')) == '0') { ?>
+		
 			<img src="<?php echo meta(array('id' => $post->ID, 'meta' => 'post_background_image')); ?>" alt="" />
 			
 			<?php if (meta(array('id' => $post->ID, 'meta' => 'post_background_image_pattern')) == '1') { ?>
